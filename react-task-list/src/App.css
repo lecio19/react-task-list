@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.titleContainer {
+  background-color: blue; 
+  padding: 1em; 
+}
+
+.mainTitle {
+  font-size: 30px;
+  margin: 0; 
+}
