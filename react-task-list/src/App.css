@@ -12,3 +12,12 @@
   font-size: 30px;
   margin: 0; 
 }
+
+.task{
+  padding: 20px;
+}
+
+.taskStatus{
+  padding: 20px;
+  color: brown;
+}
