@@ -1,5 +1,19 @@
-import { useState } from 'react'
 import './App.css'
+
+function counter(tasks) {
+  let counterTodo = 0;
+  let counterDone = 0;
+
+  tasks.forEach((task) => {
+    if (task.state === "completed") {
+      counterDone++;
+    } else {
+      counterTodo++;
+    }
+  });
+
+  return { counterTodo, counterDone };
+}
 
 function App() {
   const tasks = [
@@ -84,20 +98,7 @@ function App() {
     (task) => task.state === "completed"
   );
 
-  function counter(tasks) {
-    let counterTodo = 0;
-    let counterDone = 0;
 
-    tasks.forEach((task) => {
-      if (task.state === "completed") {
-        counterDone++;
-      } else {
-        counterTodo++;
-      }
-    });
-
-    return { counterTodo, counterDone };
-  }
 
   // Ottieni i conteggi dei task
   const { counterTodo, counterDone } = counter(tasks);
@@ -137,6 +138,7 @@ function App() {
           ))}
         </ul>
       </div>
+      
       <hr />
     </>
   );
